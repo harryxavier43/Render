@@ -1,0 +1,8 @@
+mkdir build-dir && cd build-dir
+sudo apt install libwxgtk3.2-dev
+cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
+sudo apt install libgtk-3-dev pkg-config
+cmake --build . --parallel 4
+
+wx-config --cxxflags
+wx-config --libs
