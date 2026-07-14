@@ -382,7 +382,7 @@ wxEND_EVENT_TABLE()
 
 
 GridFrame::GridFrame()
-        : wxFrame( (wxFrame *)NULL, wxID_ANY, "wxWidgets grid class demo",
+        : wxFrame( (wxFrame *)NULL, wxID_ANY, "WxGrid Customizations Demo",
                    wxDefaultPosition,
                    wxDefaultSize )
 {
@@ -1856,19 +1856,16 @@ void GridFrame::OnEditorHidden( wxGridEvent& ev )
 void GridFrame::OnAbout(  wxCommandEvent& WXUNUSED(ev) )
 {
     wxAboutDialogInfo aboutInfo;
-    aboutInfo.SetName("wxGrid demo");
-    aboutInfo.SetDescription(_("wxGrid sample program"));
-    aboutInfo.AddDeveloper("Michael Bedward");
-    aboutInfo.AddDeveloper("Julian Smart");
-    aboutInfo.AddDeveloper("Vadim Zeitlin");
+    aboutInfo.SetName("Grid Component");
+    aboutInfo.SetDescription(_("Grid Component Demo"));
+    aboutInfo.AddDeveloper("Harmeet Singh");
 
     // this is just to force the generic version of the about
     // dialog under wxMSW so that it's easy to test if the grid
     // repaints correctly when it has lost focus and a dialog
     // (different from the Windows standard message box -- it doesn't
     // work with it for some reason) is moved over it.
-    aboutInfo.SetWebSite("http://www.wxwidgets.org");
-
+    aboutInfo.SetWebSite("https://github.com/harryxavier43/Render");
     wxAboutBox(aboutInfo, this);
 }
 
@@ -1927,7 +1924,7 @@ wxGridCellAttr *MyGridCellAttrProvider::GetAttr(int row, int col,
 
 void GridFrame::OnVTable(wxCommandEvent& )
 {
-    static long s_sizeGrid = 10000;
+    static long s_sizeGrid = 100000;
 
     s_sizeGrid = wxGetNumberFromUser("Size of the table to create",
                                      "Size: ",
