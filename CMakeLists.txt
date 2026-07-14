@@ -10,8 +10,11 @@ find_package(wxWidgets REQUIRED COMPONENTS core base)
 # 2. Include the wxWidgets use file (sets up include paths and macros)
 include(${wxWidgets_USE_FILE})
 
+find_package(fmt CONFIG REQUIRED)
+
 # 3. Define your executable target
 add_executable(Render src/main.cpp)
 
+target_link_libraries(Render PRIVATE fmt::fmt)
 # 4. Link the wxWidgets libraries to your executable
 target_link_libraries(Render PRIVATE ${wxWidgets_LIBRARIES})
