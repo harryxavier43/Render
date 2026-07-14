@@ -11,3 +11,6 @@ gcc auto Installed
 cmake needs to be installed 
 ninja build system needs to be installed.
 cmake extension in vs code
+
+
+Adding more instructions
