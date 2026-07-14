@@ -14,3 +14,10 @@ cmake extension in vs code
 
 
 Adding more instructions
+
+vcpkg new --application
+vcpkg add port fmt
+
+
+sudo apt-get update
+sudo apt-get install libfmt-dev

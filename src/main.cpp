@@ -34,7 +34,7 @@
 #include "wx/generic/grideditors.h"
 
 #include "main.h"
-
+#include <fmt/core.h>
 #ifndef wxHAS_IMAGES_IN_RESOURCES
     #include "resources/sample.xpm"
 #endif
@@ -3000,6 +3000,7 @@ void ToggleGridCells(wxGrid* grid, bool useCheckered)
 void GridFrame::ToggleCheckeredCells( wxCommandEvent& WXUNUSED(event) )
 {
     ToggleGridCells(grid, /* useCheckered = */ true);
+    fmt::print("Hello, {}!\n", "world"); 
 }
 
 void GridFrame::ToggleColouredCells( wxCommandEvent& WXUNUSED(event) )
