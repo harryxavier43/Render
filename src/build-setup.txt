@@ -6,3 +6,8 @@ cmake --build . --parallel 4
 
 wx-config --cxxflags
 wx-config --libs
+
+gcc auto Installed
+cmake needs to be installed 
+ninja build system needs to be installed.
+cmake extension in vs code
